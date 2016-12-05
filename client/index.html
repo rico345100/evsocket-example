@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Realtime Chat App with EvSocket</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		html, body {
+			width: 100%;
+			height: 100%;
+		}
+		body {
+			padding: 10px;
+		}
+		hr {
+			margin: 8px 0;
+		}
+		#chat {
+			width: 100%;
+			height: 400px;
+			border: 1px solid #eee;
+			margin-bottom: 10px;
+			padding: 12px;
+			overflow-y: scroll;
+		}
+		#chat > div {
+			margin-bottom: 8px;
+		}
+		form > #message {
+			width: 80%;
+			padding: 8px 16px;
+			border: 1px solid #eee;
+		}
+		form > input[type=submit] {
+			width: 100px;
+		}
+		.button {
+			background-color: #136ee8;
+			border: none;
+			padding: 8px 16px;
+			color: #fff
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Realtime Chat App with EvSocket</h1>
+	<hr />
+
+	<div>
+		<button class="button" id="change-channel">Change Channel</button>
+		<button class="button" id="change-name">Change Name</button>
+		<button class="button" id="disconnect">Disconnect</button>
+	</div>
+	<hr />
+
+	<div id="chat"></div>
+	<form id="form">
+		<input id="message" type="text" placeholder="Type message." disabled />
+		<input class="button" type="submit" value="Send" />
+	</form>
+	
+	<script src="/evsocket-client.js"></script>
+	<script src="/app.js"></script>
+</body>
+</html>
